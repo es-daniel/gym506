@@ -32,3 +32,4 @@ yarn-debug.log*
 .DS_Store
 .idea/workspace.xml
 config/database.yml
+.idea/gym506.iml

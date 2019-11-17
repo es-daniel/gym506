@@ -25,6 +25,7 @@ gem 'bcrypt'
 gem 'bootstrap', '~> 4.3.1'
 
 gem 'haml-rails'
+# http://haml.info/docs/yardoc/file.REFERENCE.html
 gem 'haml'
 
 # Use Active Storage variant
