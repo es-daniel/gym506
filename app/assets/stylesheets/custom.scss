@@ -1,5 +1,5 @@
-$body-bg: #000;
-$body-color: #111;
+$body-bg: white;
+$body-color: white;
 
 
 $theme-colors: (
@@ -7,4 +7,5 @@ $theme-colors: (
   "secondary": black,
   "light": #eeeeee
 );
-@import 'bootstrap';
+
+@import "bootstrap";
