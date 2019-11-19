@@ -33,3 +33,4 @@ yarn-debug.log*
 .idea/workspace.xml
 config/database.yml
 .idea/gym506.iml
+.idea/codeStyles/Project.xml
