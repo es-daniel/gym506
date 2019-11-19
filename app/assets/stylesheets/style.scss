@@ -1,0 +1,44 @@
+/**Init Font Family */
+h1, h2,h3, h4, h5, h6{
+  font-family: 'Arial Black';
+}
+p, a, button, form{
+  font-family: Verdana ;
+}
+
+h1{
+  font-size: 3.75em;
+}
+
+h2{
+  font-size: 2.5em;
+}
+
+h3{
+  font-size: 2em;
+}
+
+h4{
+  font-size: 1.2em;
+}
+
+h5{
+  font-size: 1em;
+}
+/**End Font Family */
+
+a{
+  color: black;
+}
+
+.navbar-brand{
+  font-size: 2em;
+}
+
+.navbar-brand:hover{
+  color: black !important;
+}
+
+.nav-link.active{
+  color: #ed3833;
+}
