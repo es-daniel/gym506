@@ -12,6 +12,6 @@ class User < ApplicationRecord
   validates :height, presence: true, if: -> { partner? }
   validates :gender, presence: true, if: -> { partner? }
   validates :imc, presence: true, if: -> { partner? }
-  
+
   enum role: %i[admin instructor partner]
 end
