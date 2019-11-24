@@ -7,5 +7,5 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 User.create([
             { name: 'Daniel', last_name: 'Elizondo', email: 'danielelizondo12@gmail.com' , phone_number: 89026363,
-              address: 'Carrillos Bajo', position: 'Administrador', role: :admin}
+                address: 'Carrillos Bajo', position: 'Administrador', role: :admin, password: 'gym506Admin' }
             ])
