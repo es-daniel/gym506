@@ -1,24 +1,27 @@
-%nav.navbar.navbar-light.bg-light.fixed-top
-  %h2.navbar-brand.mb-0.text-primary GYM 506
-  %ul.nav.justify-content-end
-    %li.nav-item
-      = link_to t('nav.home'), root_path, class: "nav-link #{ 'active' if controller_name == 'home' }"
-    %li.nav-item
-      = link_to t('nav.about_us'), '#  ', class: 'nav-link'
-    %li.nav-item
-      = link_to t('nav.services'), '#  ', class: 'nav-link '
-    %li.nav-item
-      = link_to t('nav.benefits'), '#  ', class: 'nav-link '
-    %li.nav-item
-      = link_to t('nav.instructors'), '#  ', class: 'nav-link '
-    %li.nav-item
-      = link_to t('nav.prices'), '#  ', class: 'nav-link'
-    %li.nav-item
-      = link_to t('nav.contact'), '#  ', class: 'nav-link'
-    %li.nav-item
-      = link_to t('nav.activities'), '#  ', class: 'nav-link'
-    - if current_user&.admin?
-      = render partial: 'layouts/admin_options'
+%nav.navbar.navbar-expand-lg.bg-light.fixed-top
+  = link_to 'GYM 506', root_path, class: 'navbar-brand text-primary'
+  %button.navbar-toggler{"aria-controls" => "navbarSupportedContent", "aria-expanded" => "false", "aria-label" => "Toggle navigation", "data-target" => "#navbarSupportedContent", "data-toggle" => "collapse", :type => "button"}
+    %span.navbar-toggler-icon
+  #navbarSupportedContent.collapse.navbar-collapse.justify-content-end
+    %ul.navbar-nav
+      %li.nav-item
+        = link_to t('nav.home'), root_path, class: "nav-link #{ 'active' if controller_name == 'home' }"
+      %li.nav-item
+        = link_to t('nav.about_us'), '#  ', class: 'nav-link'
+      %li.nav-item
+        = link_to t('nav.services'), '#  ', class: 'nav-link '
+      %li.nav-item
+        = link_to t('nav.benefits'), '#  ', class: 'nav-link '
+      %li.nav-item
+        = link_to t('nav.instructors'), '#  ', class: 'nav-link '
+      %li.nav-item
+        = link_to t('nav.prices'), '#  ', class: 'nav-link'
+      %li.nav-item
+        = link_to t('nav.contact'), '#  ', class: 'nav-link'
+      %li.nav-item
+        = link_to t('nav.activities'), '#  ', class: 'nav-link'
+      - if current_user&.admin?
+        = render partial: 'layouts/admin_options'
 
-    %li.nav-item
-      =link_to t('nav.log_ing'), new_user_session_path , class: 'btn btn-secondary my-2 my-sm-0'
+      %li.nav-item
+        =link_to t('nav.log_ing'), new_user_session_path , class: 'btn btn-secondary my-2 my-sm-0'
