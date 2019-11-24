@@ -26,6 +26,11 @@ gem 'haml-rails'
 # http://haml.info/docs/yardoc/file.REFERENCE.html
 gem 'haml'
 
+gem 'devise'
+
+gem 'pundit'
+
+
 # Use Active Storage variant
 # gem 'image_processing', '~> 1.2'
 

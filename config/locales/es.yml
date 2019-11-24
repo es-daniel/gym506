@@ -1,0 +1,7 @@
+es:
+  app:
+    not_allowed:  Usuario no autorizado
+    save: Registrar
+    cancel: Cancelar
+    edit: Editar
+    destroy: Eliminar
