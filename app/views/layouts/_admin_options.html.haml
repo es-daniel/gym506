@@ -1,0 +1,8 @@
+%li.nav-item.dropdown
+  = link_to 'Administrar', '#' , 'aria-expanded': false, 'aria-haspopup': true,
+             'data-toggle':  :dropdown, role: :button,class: 'nav-link dropdown-toggle', id: 'adminDropdown'
+  .dropdown-menu{ 'aria-labelledby':  'adminDropdown' }
+    = link_to t('nav.admin.partners'), "#", class: "dropdown-item #{'active' if controller_name == 'partners' }"
+    = link_to t('nav.admin.profiles'), admin_profiles_path, class: "dropdown-item #{'active' if controller_name == 'profiles' }"
+    = link_to t('nav.admin.services'), "#", class: "dropdown-item #{'active' if controller_name == 'services' }"
+    = link_to t('nav.admin.activities'), "#", class: "dropdown-item #{'active' if controller_name == 'activities' }"

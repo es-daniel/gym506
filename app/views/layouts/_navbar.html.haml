@@ -2,20 +2,23 @@
   %h2.navbar-brand.mb-0.text-primary GYM 506
   %ul.nav.justify-content-end
     %li.nav-item
-      = link_to 'Inicio', '#  ', class: 'nav-link active'
+      = link_to t('nav.home'), root_path, class: "nav-link #{ 'active' if controller_name == 'home' }"
     %li.nav-item
-      = link_to 'Nosotros', '#  ', class: 'nav-link'
+      = link_to t('nav.about_us'), '#  ', class: 'nav-link'
     %li.nav-item
-      = link_to 'Servicios', '#  ', class: 'nav-link '
+      = link_to t('nav.services'), '#  ', class: 'nav-link '
     %li.nav-item
-      = link_to 'Beneficios', '#  ', class: 'nav-link '
+      = link_to t('nav.benefits'), '#  ', class: 'nav-link '
     %li.nav-item
-      = link_to 'Instructores', '#  ', class: 'nav-link '
+      = link_to t('nav.instructors'), '#  ', class: 'nav-link '
     %li.nav-item
-      = link_to 'Precios', '#  ', class: 'nav-link'
+      = link_to t('nav.prices'), '#  ', class: 'nav-link'
     %li.nav-item
-      = link_to 'Contacto', '#  ', class: 'nav-link'
+      = link_to t('nav.contact'), '#  ', class: 'nav-link'
     %li.nav-item
-      = link_to 'Actividades', '#  ', class: 'nav-link'
+      = link_to t('nav.activities'), '#  ', class: 'nav-link'
+    - if current_user&.admin?
+      = render partial: 'layouts/admin_options'
+
     %li.nav-item
-      %button.btn.btn-secondary.my-2.my-sm-0 Ingresar
+      =link_to t('nav.log_ing'), new_user_session_path , class: 'btn btn-secondary my-2 my-sm-0'

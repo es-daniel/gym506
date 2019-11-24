@@ -4,5 +4,7 @@ module Admin
 
     rescue_from Pundit::NotAuthorizedError, with: :user_not_authorized
 
+    layout 'application'
+
   end
 end

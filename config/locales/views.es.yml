@@ -1,0 +1,16 @@
+es:
+  nav:
+    home: Inicio
+    services: Servicios
+    about_us: Nosotros
+    benefits: Beneficios
+    instructors: Instructores
+    prices: Precios
+    contact: Contacto
+    activities: Actividades
+    log_ing: Ingresar
+    admin:
+      profiles: Perfiles
+      partners: Socios
+      services: Servicios
+      activities: Actividades
