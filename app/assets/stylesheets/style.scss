@@ -40,7 +40,11 @@ a{
 }
 
 .nav-link.active{
-  color: #ed3833;
+  color: #ed3833 !important;
+}
+
+.nav-link:hover{
+  color: #c21611 !important
 }
 
 .btn.btn-secondary:hover {
