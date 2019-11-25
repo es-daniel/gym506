@@ -3,7 +3,7 @@ h1, h2,h3, h4, h5, h6{
   font-family: 'Arial Black';
 }
 p, a, button, form{
-  font-family: Verdana ;
+  font-family: Verdana;
 }
 
 h1{
@@ -32,6 +32,7 @@ a{
 }
 
 .navbar-brand{
+  font-weight: 700;
   font-size: 2em;
 }
 
@@ -39,8 +40,11 @@ a{
   color: black !important;
 }
 
-.nav-link.active{
-  color: #ed3833 !important;
+.nav-link{
+  color: black!important;
+  .active{
+    color: #ed3833 !important;
+  }
 }
 
 .nav-link:hover{
