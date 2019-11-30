@@ -30,6 +30,8 @@ gem 'devise'
 
 gem 'pundit'
 
+gem 'font_awesome5_rails'
+
 
 # Use Active Storage variant
 # gem 'image_processing', '~> 1.2'

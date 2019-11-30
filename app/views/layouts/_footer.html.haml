@@ -1,4 +1,4 @@
-%footer
+%footer.mb-3.mt-3
   .container-fluid
     .row.text-center
       %section.col-md-4#copyright-section
@@ -14,18 +14,9 @@
         %p info@gym506.com
         %p 2222-5555 | 8902-6363
         = link_to 'Contactar', "mailto:info@gym506.com", class: 'btn btn-primary'
-      %section.col-md-2#social-networks-section
-        %ul
-          / https://iconmonstr.com
-          %li
-            %a{:href => "https://www.facebook.com/gym506", :target => "_blank"}
-              %img{:alt => "Logo de Facebook", :height => "32", :src => "icons/facebook.png", :width => "32"}/
-          %li
-            %a{:href => "https://www.twitter.com/gym506", :target => "_blank"}
-              %img{:alt => "Logo de Twitter", :height => "32", :src => "icons/twitter.png", :width => "32"}/
-          %li
-            %a{:href => "https://www.instagram.com/gym506", :target => "_blank"}
-              %img{:alt => "Logo de Instagra", :height => "32", :src => "icons/instagram.png", :width => "32"}/
-          %li
-            %a{:href => "https://www.youtube.com/gym506", :target => "_blank"}
-              %img{:alt => "Logo de YouTube", :height => "32", :src => "icons/youtube.png", :width => "32"}/
+      %section.col-md-2.d-flex.align-items-center#social-networks-section
+        = link_to fa_icon('facebook-square', type: :fab, class: 'social-network', size: '3x'), 'https://facebook.com/gym506', class: 'mr-2'
+        = link_to fa_icon('twitter-square', type: :fab, class: 'social-network', size: '3x'), 'https://facebook.com/gym506', class: 'mr-2'
+        = link_to fa_icon('instagram', type: :fab, class: 'social-network', size: '3x'), 'https://facebook.com/gym506', class: 'mr-2'
+        = link_to fa_icon('youtube', type: :fab, class: 'social-network', size: '3x'), 'https://facebook.com/gym506', class: 'mr-2'
+

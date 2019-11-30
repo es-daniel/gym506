@@ -1,3 +1,5 @@
+$color-primary: #ed3833;
+$color-secondary: black;
 html,
 body {
   height: 100%;
@@ -56,7 +58,7 @@ a{
 .nav-link{
   color: black!important;
   .active{
-    color: #ed3833 !important;
+    color: $color-primary !important;
   }
 }
 
@@ -65,7 +67,7 @@ a{
 }
 
 .btn.btn-secondary:hover {
-  color: #ed3833;
+  color: $color-primary;
 }
 
 .btn.btn-primary:hover {
@@ -78,4 +80,10 @@ header{
 
 footer p{
   margin: 0 5px;
+}
+.social-network{
+  color: $color-primary;
+  &:hover{
+    color: $color-secondary;
+  }
 }
