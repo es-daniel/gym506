@@ -22,6 +22,14 @@
         = link_to t('nav.activities'), '#  ', class: 'nav-link'
       - if current_user&.admin?
         = render partial: 'layouts/admin_options'
+      - if current_user.present?
+        %li.nav-item.dropdown
+          %a#dropdownMenu2.dropdown-toggle.nav-link{"aria-expanded" => "false", "aria-haspopup" => "true", "data-toggle" => "dropdown"}
+            = current_user.full_name
+          .dropdown-menu.dropdown-menu-righ{"aria-labelledby" => "dropdownMenu2"}
+            =link_to t('nav.profile.see'),'', class: 'dropdown-item'
+            =link_to t('nav.profile.log_out'), destroy_user_session_path , class: 'dropdown-item'
 
-      %li.nav-item
-        =link_to t('nav.log_ing'), new_user_session_path , class: 'btn btn-secondary my-2 my-sm-0'
+      -else
+        %li.nav-item
+          =link_to t('nav.log_ing'), new_user_session_path , class: 'btn btn-secondary my-2 my-sm-0'

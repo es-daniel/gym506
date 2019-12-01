@@ -14,3 +14,6 @@ es:
       partners: Socios
       services: Servicios
       activities: Actividades
+    profile:
+      see: Perfil
+      log_out: Salir
