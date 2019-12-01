@@ -12,6 +12,7 @@ require('channels');
 
 require('bootstrap');
 require('@fortawesome/fontawesome-free/js/all');
+require('bootstrap-select/js/bootstrap-select');
 
 require('./style_initializers');
 

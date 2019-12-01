@@ -31,3 +31,5 @@ es:
     not_updated:  Usuario no actualizado
     destroyed:  Usuario eliminado exitosamente
     not_destroyed:  Usuario no eliminado
+    select_preferred_days: Seleccione los días de preferencia
+    select_preferred_schedules: Seleccione el horario de preferencia

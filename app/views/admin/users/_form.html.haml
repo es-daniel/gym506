@@ -46,11 +46,13 @@
           .form-group.col-sm-12.col-md-6
             = f.label :preferred_schedule_ids, class: ''
             = f.select :preferred_schedule_ids, options_from_collection_for_select(preferred_schedules_collection,:id, :schedule, @user.preferred_schedule_ids),
-                        { prompt: false }, { class: 'form-control' , multiple: true}
+                        { prompt: false }, { class: 'form-control selectpicker' , multiple: true,
+                         data: { header: t('user.select_preferred_schedules') } }
           .form-group.col-sm-12.col-md-6
             = f.label :preferred_day_ids
             = f.select :preferred_day_ids, options_from_collection_for_select(preferred_days_collection,:id, :day, @user.preferred_day_ids),
-                        { prompt: false }, { class: 'form-control', multiple: true}
+                        { prompt: false }, { class: 'form-control selectpicker', multiple: true,
+                        data: { header: t('user.select_preferred_days') } }
         .form-row
           .form-group.col-sm-12.col-md-12
             = f.label :objectives
