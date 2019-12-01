@@ -1,0 +1,27 @@
+.offset-md-2.col-sm-12.col-md-8.mb-3
+  .card.form-card
+    .card-body
+      = form_for [:admin, @service], validate: true do |f|
+        .form-row
+          .form-group.col-sm-12.col-md-12
+            = f.label :name, class: ''
+            = f.text_field :name, class: 'form-control'
+        .form-row
+          .form-group.col-sm-12.col-md-12
+            = f.label :description
+            = f.text_field :description, class: 'form-control'
+        = f.label :photo
+        .custom-file
+          = f.file_field :photo, class: 'custom-file-input', lang: :es
+          %label.custom-file-label
+            =  @service.photo.attached? ? @service.photo.blob.filename.to_s : t('app.select_a_file')
+        -if @service.photo.attached?
+          .current-photo.d-flex.justify-content-center.mt-3
+            = image_tag @service.photo, class: 'img-thumbnail', height: 400, width: 400
+        .options.d-flex.justify-content-center.mt-3
+          = f.submit nil, class: 'btn btn-secondary'
+
+
+
+
+

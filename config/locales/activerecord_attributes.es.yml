@@ -19,6 +19,9 @@ es:
       preferred_day:
         one: Día
         other: Días
+      gym_service:
+        one: Servicio
+        other: Servicios
     attributes:
       user:
         profile: Perfil
@@ -56,3 +59,7 @@ es:
         repetitions: Repeticiones
         user_rest: Descanso
         preferred_day_id: Día
+      gym_service:
+        name: Nombre
+        description: Descripción
+        photo: Imagen

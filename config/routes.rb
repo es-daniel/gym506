@@ -4,6 +4,7 @@ Rails.application.routes.draw do
     resources :users do
       resources :user_exercises
     end
+    resources :gym_services
   end
   devise_for :users
   root 'home/home#index'

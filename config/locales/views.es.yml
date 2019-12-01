@@ -40,3 +40,10 @@ es:
     not_updated:  Ejercicio no actualizado
     destroyed:  Ejercicio eliminado exitosamente
     not_destroyed:  Ejercicio no eliminado
+  service:
+    created:  Servicio creado exitosamente
+    not_created: Servicio no creado
+    updated:  Servicio actualizado exitosamente
+    not_updated:  Servicio no actualizado
+    destroyed:  Servicio eliminado exitosamente
+    not_destroyed:  Servicio no eliminado

@@ -24,3 +24,5 @@ UserExercise.create(user: User.last, name: 'Remo con mancuerna', series: 3, repe
 UserExercise.create(user: User.last, name: 'Remo con mancuerna 2', series: 3, repetitions: '8-12', user_rest: '60 s', preferred_day_id: 1)
 UserExercise.create(user: User.last, name: 'Remo con mancuerna 3', series: 3, repetitions: '8-12', user_rest: '60 s', preferred_day_id: 2)
 UserExercise.create(user: User.last, name: 'Remo con mancuerna 4', series: 3, repetitions: '8-10', user_rest: '60 s', preferred_day_id: 2)
+
+GymService.create(name: 'Spinning', description: 'Este es un ejercicio aeróbico de piernas que se realiza en una bicicleta estacionaria, tiene movimientos de alto impacto que ayudan a tonificar la parte baja del cuerpo y al mismo tiempo contribuye al aumento de la resistencia.')
