@@ -1,0 +1,56 @@
+.offset-md-2.col-sm-12.col-md-8.mb-3
+  .card.form-card
+    .card-body
+      = form_for [:admin, @user], validate: true do |f|
+        .form-row
+          .form-group.col-sm-12.col-md-6
+            = f.label :name, class: ''
+            = f.text_field :name, class: 'form-control'
+          .form-group.col-sm-12.col-md-6
+            = f.label :last_name
+            = f.text_field :last_name, class: 'form-control'
+        .form-row
+          .form-group.col-sm-12.col-md-6
+            = f.label :identification, class: ''
+            = f.text_field :identification, class: 'form-control'
+          .form-group.col-sm-12.col-md-6
+            = f.label :birthday
+            = f.text_field :birthday, class: 'form-control'
+        .form-row
+          .form-group.col-sm-12.col-md-6
+            = f.label :email
+            = f.email_field :email, class: 'form-control'
+          .form-group.col-sm-12.col-md-6
+            = f.label :phone_number
+            = f.phone_field :phone_number, class: 'form-control'
+        .form-row
+          .form-group.col-sm-12.col-md-12
+            = f.label :address
+            = f.text_area :address, class: 'form-control'
+        .form-row
+          .form-group.col-sm-12.col-md-6
+            = f.label :weight, class: ''
+            = f.text_field :weight, class: 'form-control'
+          .form-group.col-sm-12.col-md-6
+            = f.label :height
+            = f.text_field :height, class: 'form-control'
+        .form-row
+          .form-group.col-sm-12.col-md-12
+            = f.label :objectives
+            = f.text_area :objectives, class: 'form-control'
+        = f.label :photo
+        .custom-file
+          = f.file_field :photo, class: 'custom-file-input', lang: :es
+          %label.custom-file-label
+            =  @user.photo.attached? ? @user.photo.blob.filename.to_s : t('app.select_a_file')
+        -if @user.photo.attached?
+          .current-photo.d-flex.justify-content-center.mt-3
+            = image_tag @user.photo, class: 'img-thumbnail'
+
+        .options.d-flex.justify-content-center.mt-3
+          = f.submit nil, class: 'btn btn-secondary'
+
+
+
+
+

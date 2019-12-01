@@ -7,6 +7,9 @@ es:
       profile:
         one: Perfil
         other: Perfiles
+      patner:
+        one: Socio
+        other: Socios
     attributes:
       user:
         profile: Perfil
@@ -17,6 +20,13 @@ es:
         position: Cargo
         photo: Foto de perfil
         address: Dirección
+        birthday: Fecha de nacimiento
+        identification: Cédula
+        weight: Peso
+        height: Estatura
+        gender: Genero
+        imc: IMC
+        objectives: Objetivos
         role: Tipo de usuario
         roles:
           admin: Administrador

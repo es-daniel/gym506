@@ -24,3 +24,10 @@ es:
     not_updated:  Perfil no actualizado
     destroyed:  Perfil eliminado exitosamente
     not_destroyed:  Perfil no eliminado
+  user:
+    created: Usuario creado exitosamente
+    not_created: Usuario no creado
+    updated:  Usuario actualizado exitosamente
+    not_updated:  Usuario no actualizado
+    destroyed:  Usuario eliminado exitosamente
+    not_destroyed:  Usuario no eliminado
