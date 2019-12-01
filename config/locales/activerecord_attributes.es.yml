@@ -10,10 +10,11 @@ es:
     attributes:
       user:
         profile: Perfil
-        first_name: Nombre
+        name: Nombre
         last_name: Apellidos
         phone_number: Teléfono
         email: Correo
+        position: Cargo
         role: Tipo de usuario
         roles:
           admin: Administrador

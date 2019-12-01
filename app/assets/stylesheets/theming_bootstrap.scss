@@ -8,5 +8,10 @@ $theme-colors: (
   "light": #eeeeee
 );
 
+$custom-file-text: (
+    en: "Browse",
+    es: "Elegir"
+);
+
 @import 'bootstrap/scss/bootstrap';
 @import "@fortawesome/fontawesome-free/scss/fontawesome";

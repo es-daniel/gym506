@@ -1,0 +1,35 @@
+= form_for @profile,  url: admin_profiles_path, validate: true do |f|
+  .form-row
+    .form-group.col
+      = f.label :name
+      = f.text_field :name, class: 'form-control'
+    .form-group.col
+      = f.label :last_name
+      = f.text_field :name, class: 'form-control'
+  .form-row
+    .form-group.col
+      = f.label :email
+      = f.email_field :email, class: 'form-control'
+    .form-group.col
+      = f.label :phone_number
+      = f.phone_field :phone_number, class: 'form-control'
+  .form-row
+    .form-group.col
+      = f.label :address
+      = f.text_area :address, class: 'form-control'
+  .form-row
+    .form-group.col
+      = f.label :position
+      = f.email_field :position, class: 'form-control'
+    .form-group.col
+      = f.label :role
+      = f.phone_field :phone_number, class: 'form-control'
+
+  .custom-file
+    %input#customFileLang.custom-file-input{:lang => "es", :type => "file"}/
+    %label.custom-file-label{:for => "customFileLang"} Seleccionar Archivo
+
+
+
+
+
