@@ -1,25 +1,25 @@
 %footer.mb-3.mt-3
-  .container-fluid
+  .container
     .row.text-center
       %hr.clearfix.w-100.d-md-none.pb-1
-      %section.col-md-6.col-lg-4#copyright-section
+      %section.col-12.col-sm-12.col-md-6.col-lg-4#copyright-section
         %p.text-primary
           Gimnasio 506
           %span.text-secondary © Todos los derechos reservados
         %p Desarrollado por: Daniel Elizondo Sánchez
-      %hr.clearfix.w-100.d-sm-none.d-md-none.pb-1
-      %section.col-md-6.col-lg-3#schedule-section
+      %hr.clearfix.w-100.d-md-none.pb-1
+      %section.col-12.col-sm-12.col-md-6.col-lg-3#schedule-section
         %p Lunes a Viernes: 5:00 am - 8:00 pm
         %p Sabados: 6:00 am - 6:00 pm
         %p Sabados: 6:00 am - 2:00 pm
       %hr.clearfix.w-100.d-none.d-md-block.d-lg-none
       %hr.clearfix.w-100.d-md-none.pb-1
-      %section.col-md-6.col-lg-3#contact-section
+      %section.col-12.col-sm-12.col-md-6.col-lg-3#contact-section
         %p info@gym506.com
         %p 2222-5555 | 8902-6363
         = link_to 'Contactar', "mailto:info@gym506.com", class: 'btn btn-primary mt-2'
       %hr.clearfix.w-100.d-md-none.pb-1
-      %section.col-md-6.col-lg-2.d-flex.align-items-center.justify-content-center#social-networks-section
+      %section.col-12.col-sm-12.col-md-6.col-lg-2.d-flex.align-items-center.justify-content-center#social-networks-section
         = link_to fa_icon('facebook-square', type: :fab, class: 'social-network', size: '3x'), 'https://facebook.com/gym506',
                   class: 'mr-2', target: '_blank'
         = link_to fa_icon('twitter-square', type: :fab, class: 'social-network', size: '3x'), 'https://twitter.com/gym506',
