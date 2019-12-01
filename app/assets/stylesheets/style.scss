@@ -51,16 +51,15 @@ a{
   font-size: 2em;
 }
 
-.navbar-brand:hover{
-  color: black !important;
-}
-
 .nav-link{
-  color: black!important;
-  .active{
+  color: $color-secondary !important;
+  &.active{
     color: $color-primary !important;
   }
 }
+
+
+
 
 .nav-link:hover{
   color: #c21611 !important
