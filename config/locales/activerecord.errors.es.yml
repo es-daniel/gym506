@@ -1,0 +1,8 @@
+es:
+  activerecord:
+    errors:
+      models:
+        user:
+          attributes:
+            first_name:
+              blank: Es necesario proporcionar un nombre

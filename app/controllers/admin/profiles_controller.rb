@@ -1,6 +1,7 @@
 module Admin
   class ProfilesController < Admin::ApplicationController
     def index
+      @users = User.where(role: [:admin, :instructor])
     end
 
     def new

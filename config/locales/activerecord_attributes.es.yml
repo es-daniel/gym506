@@ -1,0 +1,21 @@
+es:
+  activerecord:
+    models:
+      user:
+        one: Usuario
+        other: Usuarios
+      profile:
+        one: Perfil
+        other: Perfiles
+    attributes:
+      user:
+        profile: Perfil
+        first_name: Nombre
+        last_name: Apellidos
+        phone_number: Teléfono
+        email: Correo
+        role: Tipo de usuario
+        roles:
+          admin: Administrador
+          instructor: Instructor
+          partner: Usuario

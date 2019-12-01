@@ -6,6 +6,7 @@ class User < ApplicationRecord
   validates :name, presence: true
   validates :last_name, presence: true
   validates :email, presence: true
+  validates :email, uniqueness: true
   validates :phone_number, presence: true
   validates :address, presence: true
   validates :role, presence: true
@@ -18,4 +19,8 @@ class User < ApplicationRecord
   validates :imc, presence: true, if: -> { partner? }
 
   enum role: %i[admin instructor partner]
+
+  def full_name
+    "#{name} #{last_name}"
+  end
 end
