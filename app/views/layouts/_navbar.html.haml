@@ -28,7 +28,7 @@
             = current_user.full_name
           .dropdown-menu.dropdown-menu-righ{"aria-labelledby" => "dropdownMenu2"}
             =link_to t('nav.profile.see'),'', class: 'dropdown-item'
-            =link_to t('nav.profile.log_out'), destroy_user_session_path , class: 'dropdown-item'
+            =link_to t('nav.profile.log_out'), destroy_user_session_path ,method: :delete, class: 'dropdown-item'
 
       -else
         %li.nav-item
