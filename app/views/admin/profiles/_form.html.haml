@@ -23,7 +23,7 @@
         .form-row
           .form-group.col-sm-12.col-md-6
             = f.label :position
-            = f.text_field :position, class: 'form-control'
+            = f.text_field :position, class: 'form-control', validate: { presence: true }
           .form-group.col-sm-12.col-md-6
             = f.label :role
             = f.select :role, options_for_select(admin_roles_collection, @profile.role), { prompt: false },
