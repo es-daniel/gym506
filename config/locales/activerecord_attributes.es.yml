@@ -15,6 +15,7 @@ es:
         phone_number: Teléfono
         email: Correo
         position: Cargo
+        photo: Foto de perfil
         role: Tipo de usuario
         roles:
           admin: Administrador

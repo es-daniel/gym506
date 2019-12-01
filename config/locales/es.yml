@@ -5,6 +5,8 @@ es:
     cancel: Cancelar
     edit: Editar
     destroy: Eliminar
+    select_a_file: Seleccione un archivo
     listing_of: Listado de %{model}
     create_new: Crear nuevo %{model}
     create_new_femenine: Crear nueva %{model}
+    save_model: Guardar %{model}

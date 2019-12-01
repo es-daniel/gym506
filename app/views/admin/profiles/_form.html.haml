@@ -1,33 +1,36 @@
 = form_for @profile,  url: admin_profiles_path, validate: true do |f|
   .form-row
-    .form-group.col
+    .form-group.col-sm-12.col-md-6
       = f.label :name
       = f.text_field :name, class: 'form-control'
-    .form-group.col
+    .form-group.col-sm-12.col-md-6
       = f.label :last_name
-      = f.text_field :name, class: 'form-control'
+      = f.text_field :last_name, class: 'form-control'
   .form-row
-    .form-group.col
+    .form-group.col-sm-12.col-md-6
       = f.label :email
       = f.email_field :email, class: 'form-control'
-    .form-group.col
+    .form-group.col-sm-12.col-md-6
       = f.label :phone_number
       = f.phone_field :phone_number, class: 'form-control'
   .form-row
-    .form-group.col
+    .form-group.col-sm-12.col-md-12
       = f.label :address
       = f.text_area :address, class: 'form-control'
   .form-row
-    .form-group.col
+    .form-group.col-sm-12.col-md-6
       = f.label :position
-      = f.email_field :position, class: 'form-control'
-    .form-group.col
+      = f.text_field :position, class: 'form-control'
+    .form-group.col-sm-12.col-md-6
       = f.label :role
-      = f.phone_field :phone_number, class: 'form-control'
-
+      = f.select :role, options_for_select(admin_roles_collection, @profile.role), { prompt: false },
+                 { class: 'form-control' }
+  = f.label :photo
   .custom-file
-    %input#customFileLang.custom-file-input{:lang => "es", :type => "file"}/
-    %label.custom-file-label{:for => "customFileLang"} Seleccionar Archivo
+    = f.file_field :photo, class: 'custom-file-input', lang: :es
+    %label.custom-file-label= t('app.select_a_file')
+  .options.d-flex.justify-content-center.mt-3
+    = f.submit t('app.save_model', model: t('activerecord.models.profile.one')), class: 'btn btn-secondary'
 
 
 

@@ -3,6 +3,11 @@ class User < ApplicationRecord
   # :confirmable, :lockable, :timeoutable, :trackable and :omniauthable
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
+
+  has_one_attached :photo
+
+  before_validation :create_password
+
   validates :name, presence: true
   validates :last_name, presence: true
   validates :email, presence: true
@@ -23,4 +28,11 @@ class User < ApplicationRecord
   def full_name
     "#{name} #{last_name}"
   end
+
+  private
+
+  def create_password
+    self.password = SecureRandom.hex(16)  if password.nil?
+  end
+
 end
