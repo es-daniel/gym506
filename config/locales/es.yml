@@ -1,5 +1,7 @@
 es:
   app:
+    name: Gimnasio 506
+    slogan: Trabajando en su salud desde 2018
     not_allowed:  Usuario no autorizado
     save: Registrar
     cancel: Cancelar

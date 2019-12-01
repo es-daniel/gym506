@@ -11,6 +11,6 @@
   %body.d-flex.flex-column
     %header
       = render partial: 'layouts/navbar'
-    %main#page-content.container-fluid
+    %main#page-content{ class: "#{'container-fluid' unless controller_path ==  'home/home' }" }
       = yield
     = render partial: 'layouts/footer'

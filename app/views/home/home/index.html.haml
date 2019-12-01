@@ -1,2 +1,11 @@
-%h1 Inicio
-%p Find me in app/views/home/home/index.html.haml
+%section#video-section
+  .overlay
+  %video{:autoplay => "autoplay", :loop => "loop", :muted => "muted", :playsinline => "playsinline"}
+    %source{:src => "https://inexperiencedsuperboutput--danielelizondo.repl.co/videos/background-video.mp4", :type => "video/mp4"}
+  .container.h-100
+    .d-flex.h-100.text-center.align-items-center
+      .w-100.text-white
+        %h1.text-primary.d-none.d-md-block= t('app.name')
+        %h2.text-primary.d-block.d-sm-block.d-md-none= t('app.name')
+
+        %h2.mb-0= t('app.slogan')
