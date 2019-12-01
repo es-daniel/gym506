@@ -4,5 +4,5 @@
   .dropdown-menu{ 'aria-labelledby':  'adminDropdown' }
     = link_to t('nav.admin.partners'), admin_users_path, class: "dropdown-item #{'active' if controller_path == 'admin/users' }"
     = link_to t('nav.admin.profiles'), admin_profiles_path, class: "dropdown-item #{'active' if controller_name == 'profiles' }"
-    = link_to t('nav.admin.services'), admin_gym_services_path , class: "dropdown-item #{'active' if controller_path == 'admin/services' }"
-    = link_to t('nav.admin.activities'), "#", class: "dropdown-item #{'active' if controller_name == 'activities' }"
+    = link_to t('nav.admin.services'), admin_gym_services_path, class: "dropdown-item #{'active' if controller_path == 'admin/gym_services' }"
+    = link_to t('nav.admin.activities'), admin_activities_path, class: "dropdown-item #{'active' if controller_path == 'admin/activities'  }"

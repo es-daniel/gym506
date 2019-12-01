@@ -1,0 +1,29 @@
+.offset-md-2.col-sm-12.col-md-8.mb-3
+  .card.form-card
+    .card-body
+      = form_for [:admin, @activity], validate: true do |f|
+        .form-row
+          .form-group.col-sm-12.col-md-12
+            = f.label :name, class: ''
+            = f.text_field :name, class: 'form-control'
+        .form-row
+          .form-group.col-sm-12.col-md-12
+            = f.label :start_date
+            = f.text_field :start_date, class: 'form-control'
+        .form-row
+          .form-group.col-sm-12.col-md-12
+            = f.label :maximum_capacity
+            = f.number_field :maximum_capacity, class: 'form-control'
+        .form-row
+          .form-group.col-sm-12.col-md-12
+            = f.label :user_id
+            = f.select :user_id, options_from_collection_for_select(instructors_collection,:id, :full_name, @activity.user_id),
+                        { prompt: false }, { class: 'form-control selectpicker',
+                        data: { header: t('activity.select_an_instructor') } }
+        .options.d-flex.justify-content-center.mt-3
+          = f.submit nil, class: 'btn btn-secondary'
+
+
+
+
+

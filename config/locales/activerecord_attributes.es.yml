@@ -22,6 +22,9 @@ es:
       gym_service:
         one: Servicio
         other: Servicios
+      activity:
+        one: Actividad
+        other: Actividades
     attributes:
       user:
         profile: Perfil
@@ -63,3 +66,9 @@ es:
         name: Nombre
         description: Descripción
         photo: Imagen
+      activity:
+        name: Nombre
+        start_date: Fecha
+        user_id: Instructor
+        maximum_capacity: Capacidad máxima
+        enrolled: Matriculados

@@ -47,3 +47,12 @@ es:
     not_updated:  Servicio no actualizado
     destroyed:  Servicio eliminado exitosamente
     not_destroyed:  Servicio no eliminado
+  activity:
+    created:  Actividad creado exitosamente
+    not_created: Actividad no creado
+    updated:  Actividad actualizado exitosamente
+    not_updated:  Actividad no actualizado
+    destroyed:  Actividad eliminado exitosamente
+    not_destroyed:  Actividad no eliminado
+    select_an_instructor: Seleccione un instructor
+

@@ -18,4 +18,9 @@ module CollectionsHelper
   def preferred_schedules_collection
     PreferredSchedule.all
   end
+
+  def instructors_collection
+    User.where(role: :instructor)
+  end
+
 end
