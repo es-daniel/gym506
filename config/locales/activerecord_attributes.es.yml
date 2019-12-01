@@ -10,6 +10,9 @@ es:
       patner:
         one: Socio
         other: Socios
+      routine:
+        one: Rutina
+        other: Rutinas
     attributes:
       user:
         profile: Perfil
