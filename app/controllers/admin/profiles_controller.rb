@@ -14,24 +14,30 @@ module Admin
     def create
       @profile = User.new(profile_params)
       if @profile.save
-        flash[:success] = 'Perfil Creado'
+        flash[:success] = t('profile.created')
         redirect_to admin_profiles_path
       else
+        flash[:error] = t('profile.not_created')
         render 'new'
       end
     end
 
     def update
       if @profile.update(profile_params)
-        flash[:success] = 'Perfil Creado'
+        flash[:success] = t('profile.updated')
         redirect_to admin_profiles_path
       else
-        render 'new'
+        flash[:error] = t('profile.not_updated')
+        render 'edit'
       end
     end
 
     def destroy
-      @profile.destroy
+      if @profile.destroy
+        flash[:success] = t('profile.destroyed')
+      else
+        flash[:error] = t('profile.not_destroyed')
+      end
     end
 
     private
