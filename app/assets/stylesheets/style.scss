@@ -42,6 +42,27 @@ h5{
 }
 /**End Font Family */
 
+/** Forms */
+input.form-control, textarea.form-control {
+  border-left: none;
+  border-right: none;
+  border-top: none;
+  border-bottom: solid 2px;
+}
+input.form-control {
+  max-height: 24px
+}
+
+input.form-control:focus , textarea.form-control:focus,  select.form-control:focus{
+  border-bottom-color: #ed3833;
+  box-shadow: none;
+}
+
+form label{
+  font-weight: 600;
+}
+/**Forms*/
+
 a{
   color: black;
 }

@@ -2,3 +2,4 @@ es:
   errors:
     messages:
       blank:  Campo requerido
+      invalid: Formato invalido
