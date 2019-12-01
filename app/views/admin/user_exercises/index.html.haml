@@ -1,0 +1,34 @@
+#profiles
+  %h2.text-center= t('app.listing_of', model: t('activerecord.models.user_exercise.other'))
+  %section.model-list
+    .table-options.float-lg-right.mt-3.mb-4
+      = link_to t('app.create_new', model: t('activerecord.models.user_exercise.one').downcase), new_admin_user_user_exercise_path,
+                class: 'btn btn-secondary btn-block'
+    .table-responsive
+      %table#profiles-table.table.table-hover.table-bordered
+        %thead
+          %th= t('activerecord.models.preferred_day.one')
+          %th= t('activerecord.attributes.user_exercise.name')
+          %th= t('activerecord.attributes.user_exercise.series')
+          %th= t('activerecord.attributes.user_exercise.repetitions')
+          %th= t('activerecord.attributes.user_exercise.user_rest')
+          %th
+          %th
+        %tbody
+          - @user_exercises.each do |user_exercises|
+            - user_exercises.second.each do |exercise|
+              %tr
+                - if exercise == user_exercises.second.first
+                  %td.font-weight-bold{rowspan: user_exercises.second.count}
+                    = exercise.preferred_day
+                %td= exercise.name
+                %td= exercise.series
+                %td= exercise.repetitions
+                %td= exercise.user_rest
+
+                %td
+                  = link_to fa_icon('pencil-alt'), edit_admin_user_user_exercise_path(@user, exercise),
+                            class: 'btn btn-outline-success mr-1', 'data-toggle': :tooltip, title: t('app.edit')
+                %td
+                  = link_to fa_icon('trash-alt'), [:admin, @user, exercise], method: :delete, class: 'btn btn-outline-danger',
+                            'data-toggle': :tooltip, title: t('app.destroy')

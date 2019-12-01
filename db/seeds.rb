@@ -19,3 +19,8 @@ User.create([
               address: 'Carrillos Bajo', password: 'gym506Partner', objectives: 'Masa Muscular', status: :without_defaulter,
               preferred_schedule_ids: [1,3], gender: :male, role: :partner, preferred_day_ids: [1,2,5] }
             ])
+
+UserExercise.create(user: User.last, name: 'Remo con mancuerna', series: 3, repetitions: '8-12', user_rest: '60 s', preferred_day_id: 1)
+UserExercise.create(user: User.last, name: 'Remo con mancuerna 2', series: 3, repetitions: '8-12', user_rest: '60 s', preferred_day_id: 1)
+UserExercise.create(user: User.last, name: 'Remo con mancuerna 3', series: 3, repetitions: '8-12', user_rest: '60 s', preferred_day_id: 2)
+UserExercise.create(user: User.last, name: 'Remo con mancuerna 4', series: 3, repetitions: '8-10', user_rest: '60 s', preferred_day_id: 2)

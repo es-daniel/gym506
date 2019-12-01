@@ -1,7 +1,9 @@
 Rails.application.routes.draw do
   namespace :admin do
     resources :profiles
-    resources :users
+    resources :users do
+      resources :user_exercises
+    end
   end
   devise_for :users
   root 'home/home#index'

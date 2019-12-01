@@ -33,3 +33,10 @@ es:
     not_destroyed:  Usuario no eliminado
     select_preferred_days: Seleccione los días de preferencia
     select_preferred_schedules: Seleccione el horario de preferencia
+  user_exercise:
+    created:  Ejercicio creado exitosamente
+    not_created: Ejercicio no creado
+    updated:  Ejercicio actualizado exitosamente
+    not_updated:  Ejercicio no actualizado
+    destroyed:  Ejercicio eliminado exitosamente
+    not_destroyed:  Ejercicio no eliminado

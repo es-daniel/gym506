@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_12_01_170127) do
+ActiveRecord::Schema.define(version: 2019_12_01_184120) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -48,6 +48,20 @@ ActiveRecord::Schema.define(version: 2019_12_01_170127) do
     t.datetime "deleted_at"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "user_exercises", force: :cascade do |t|
+    t.bigint "preferred_day_id", null: false
+    t.bigint "user_id", null: false
+    t.string "name"
+    t.string "repetitions"
+    t.integer "series"
+    t.string "user_rest"
+    t.datetime "deleted_at"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["preferred_day_id"], name: "index_user_exercises_on_preferred_day_id"
+    t.index ["user_id"], name: "index_user_exercises_on_user_id"
   end
 
   create_table "user_preferred_days", force: :cascade do |t|
@@ -96,6 +110,8 @@ ActiveRecord::Schema.define(version: 2019_12_01_170127) do
   end
 
   add_foreign_key "active_storage_attachments", "active_storage_blobs", column: "blob_id"
+  add_foreign_key "user_exercises", "preferred_days"
+  add_foreign_key "user_exercises", "users"
   add_foreign_key "user_preferred_days", "preferred_days"
   add_foreign_key "user_preferred_days", "users"
   add_foreign_key "user_preferred_schedules", "preferred_schedules"

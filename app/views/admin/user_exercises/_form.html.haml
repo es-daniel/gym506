@@ -1,0 +1,34 @@
+.offset-md-2.col-sm-12.col-md-8.mb-3
+  .card.form-card
+    .card-body
+      = form_for [:admin, @user, @user_exercise], validate: true do |f|
+        = f.hidden_field :user_id
+        .form-row
+          .form-group.col-sm-12.col-md-12
+            = f.label :preferred_day_id
+            = f.select :preferred_day_id, options_from_collection_for_select(preferred_days_collection,:id, :day, @user_exercise.preferred_day_id),
+                        { prompt: false }, { class: 'form-control selectpicker',
+                        data: { header: t('user.select_preferred_days') } }
+        .form-row
+          .form-group.col-sm-12.col-md-12
+            = f.label :name, class: ''
+            = f.text_field :name, class: 'form-control'
+        .form-row
+          .form-group.col-sm-12.col-md-12
+            = f.label :series
+            = f.number_field :series, class: 'form-control'
+        .form-row
+          .form-group.col-sm-12.col-md-12
+            = f.label :repetitions
+            = f.text_field :repetitions, class: 'form-control'
+        .form-row
+          .form-group.col-sm-12.col-md-12
+            = f.label :user_rest
+            = f.text_field :user_rest, class: 'form-control'
+        .options.d-flex.justify-content-center.mt-3
+          = f.submit nil, class: 'btn btn-secondary'
+
+
+
+
+

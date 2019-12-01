@@ -13,6 +13,12 @@ es:
       routine:
         one: Rutina
         other: Rutinas
+      user_exercise:
+        one: Ejercicio
+        other: Ejercicios
+      preferred_day:
+        one: Día
+        other: Días
     attributes:
       user:
         profile: Perfil
@@ -44,3 +50,9 @@ es:
         genders:
           male: Masculino
           female: Femenino
+      user_exercise:
+        name: Nombre
+        series: Series
+        repetitions: Repeticiones
+        user_rest: Descanso
+        preferred_day_id: Día
