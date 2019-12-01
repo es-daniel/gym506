@@ -19,7 +19,7 @@
       %li.nav-item
         = link_to t('nav.contact'), '#  ', class: 'nav-link'
       %li.nav-item
-        = link_to t('nav.activities'), '#  ', class: 'nav-link'
+        = link_to t('nav.activities'), activities_path, class: 'nav-link'
       - if current_user&.admin?
         = render partial: 'layouts/admin_options'
       - if current_user.present?
