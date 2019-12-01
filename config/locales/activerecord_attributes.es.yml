@@ -16,6 +16,7 @@ es:
         email: Correo
         position: Cargo
         photo: Foto de perfil
+        address: Dirección
         role: Tipo de usuario
         roles:
           admin: Administrador

@@ -6,7 +6,7 @@ class User < ApplicationRecord
 
   has_one_attached :photo
 
-  before_validation :create_password
+  before_validation :create_password, on: :create
 
   validates :name, presence: true
   validates :last_name, presence: true

@@ -2,7 +2,7 @@ module Admin
   class ProfilesController < Admin::ApplicationController
     before_action :set_profile, only: %i[edit destroy update]
     def index
-      @profiles = User.where(role: [:admin, :instructor])
+      @profiles = User.where(role: [:admin, :instructor]).where.not(id: current_user.id)
     end
 
     def new
@@ -15,6 +15,7 @@ module Admin
       @profile = User.new(profile_params)
       if @profile.save
         flash[:success] = 'Perfil Creado'
+        redirect_to admin_profiles_path
       else
         render 'new'
       end
@@ -23,6 +24,7 @@ module Admin
     def update
       if @profile.update(profile_params)
         flash[:success] = 'Perfil Creado'
+        redirect_to admin_profiles_path
       else
         render 'new'
       end
