@@ -1,28 +1,27 @@
-#profiles
+%section#profiles
   %h2.text-center= t('app.listing_of', model: t('activerecord.models.profile.other'))
-  %section.model-list
-    .table-options.float-lg-right.mt-3.mb-4
-      = link_to t('app.create_new', model: t('activerecord.models.profile.one').downcase), new_admin_profile_path,
-                class: 'btn btn-secondary btn-block'
-    .table-responsive
-      %table#profiles-table.table.table-hover
-        %thead
-          %th= t('activerecord.attributes.user.name')
-          %th= t('activerecord.attributes.user.phone_number')
-          %th= t('activerecord.attributes.user.email')
-          %th= t('activerecord.attributes.user.role')
-          %th
-          %th
-        %tbody
-          - @profiles.each do |user|
-            %tr
-              %td= user.full_name
-              %td= user.phone_number
-              %td= user.email
-              %td= t("activerecord.attributes.user.roles.#{user.role}")
-              %td
-                = link_to fa_icon('pencil-alt'), edit_admin_profile_path(user),
-                          class: 'btn btn-outline-success mr-1', 'data-toggle': :tooltip, title: t('app.edit')
-              %td
-                = link_to fa_icon('trash-alt'), admin_profile_path(user), method: :delete, class: 'btn btn-outline-danger',
-                          'data-toggle': :tooltip, title: t('app.destroy')
+  .table-options.float-lg-right.mt-3.mb-4
+    = link_to t('app.create_new', model: t('activerecord.models.profile.one').downcase), new_admin_profile_path,
+              class: 'btn btn-secondary btn-block'
+  .table-responsive
+    %table#profiles-table.table.table-hover
+      %thead
+        %th= t('activerecord.attributes.user.name')
+        %th= t('activerecord.attributes.user.phone_number')
+        %th= t('activerecord.attributes.user.email')
+        %th= t('activerecord.attributes.user.role')
+        %th
+        %th
+      %tbody
+        - @profiles.each do |user|
+          %tr
+            %td= user.full_name
+            %td= user.phone_number
+            %td= user.email
+            %td= t("activerecord.attributes.user.roles.#{user.role}")
+            %td
+              = link_to fa_icon('pencil-alt'), edit_admin_profile_path(user),
+                        class: 'btn btn-outline-success mr-1', 'data-toggle': :tooltip, title: t('app.edit')
+            %td
+              = link_to fa_icon('trash-alt'), admin_profile_path(user), method: :delete, class: 'btn btn-outline-danger',
+                        'data-toggle': :tooltip, title: t('app.destroy')

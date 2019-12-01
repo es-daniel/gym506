@@ -1,24 +1,23 @@
-#profiles
+%section#gym-services
   %h2.text-center= t('app.listing_of', model: t('activerecord.models.gym_service.other'))
-  %section.model-list
-    .table-options.float-lg-right.mt-3.mb-4
-      = link_to t('app.create_new', model: t('activerecord.models.gym_service.one').downcase), new_admin_gym_service_path,
-                class: 'btn btn-secondary btn-block'
-    .table-responsive
-      %table#profiles-table.table.table-hover
-        %thead
-          %th= t('activerecord.attributes.gym_service.name')
-          %th= t('activerecord.attributes.gym_service.description')
-          %th
-          %th
-        %tbody
-          - @services.each do |service|
-            %tr
-              %td= service.name
-              %td= service.description
-              %td
-                = link_to fa_icon('pencil-alt'), edit_admin_gym_service_path(service),
-                          class: 'btn btn-outline-success mr-1', 'data-toggle': :tooltip, title: t('app.edit')
-              %td
-                = link_to fa_icon('trash-alt'), [:admin, service], method: :delete, class: 'btn btn-outline-danger',
-                          'data-toggle': :tooltip, title: t('app.destroy')
+  .table-options.float-lg-right.mt-3.mb-4
+    = link_to t('app.create_new', model: t('activerecord.models.gym_service.one').downcase), new_admin_gym_service_path,
+              class: 'btn btn-secondary btn-block'
+  .table-responsive
+    %table#services-table.table.table-hover
+      %thead
+        %th= t('activerecord.attributes.gym_service.name')
+        %th= t('activerecord.attributes.gym_service.description')
+        %th
+        %th
+      %tbody
+        - @services.each do |service|
+          %tr
+            %td= service.name
+            %td= service.description
+            %td
+              = link_to fa_icon('pencil-alt'), edit_admin_gym_service_path(service),
+                        class: 'btn btn-outline-success mr-1', 'data-toggle': :tooltip, title: t('app.edit')
+            %td
+              = link_to fa_icon('trash-alt'), [:admin, service], method: :delete, class: 'btn btn-outline-danger',
+                        'data-toggle': :tooltip, title: t('app.destroy')
