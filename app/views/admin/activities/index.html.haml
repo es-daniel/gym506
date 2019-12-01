@@ -17,7 +17,7 @@
         - @activities.each do |activity|
           %tr
             %td= activity.name
-            %td= activity.start_date
+            %td= activity.start_date.strftime("%Y-%m-%d %H:%M")
             %td= activity.instructor.full_name
             %td= activity.maximum_capacity
             %td= activity.enrolled
