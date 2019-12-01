@@ -21,13 +21,13 @@
             %tr
               %td= user.identification
               %td= user.full_name
-              %td= user.gender
+              %td= t("activerecord.attributes.user.genders.#{user.gender}")
               %td= user.phone_number
               %td= user.email
               %td= t("activerecord.attributes.user.statuses.#{user.status}")
               %td
-                = link_to fa_icon('list'), edit_admin_user_path(user),
-                          class: 'btn btn-outline-success mr-1', 'data-toggle': :tooltip, title: t('activerecord.models.routine.one')
+                = link_to fa_icon('dumbbell'), edit_admin_user_path(user),
+                          class: 'btn btn-outline-info mr-1', 'data-toggle': :tooltip, title: t('activerecord.models.routine.one')
               %td
                 = link_to fa_icon('pencil-alt'), edit_admin_user_path(user),
                           class: 'btn btn-outline-success mr-1', 'data-toggle': :tooltip, title: t('app.edit')
