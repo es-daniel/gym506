@@ -8,13 +8,13 @@ class CreateUsers < ActiveRecord::Migration[6.0]
       t.string :email
       t.integer :phone_number
       t.string :address
-      t.integer :weight
-      t.integer :height
+      t.float :weight
+      t.float :height
       t.integer :gender
-      t.integer :imc
+      t.float :imc
       t.string :objectives
       t.string :position
-      t.integer :role, default: :partner
+      t.integer :role, default: 2
       t.datetime :deleted_at
       t.timestamps
     end

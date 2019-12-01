@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_12_01_060746) do
+ActiveRecord::Schema.define(version: 2019_12_01_170127) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -36,6 +36,38 @@ ActiveRecord::Schema.define(version: 2019_12_01_060746) do
     t.index ["key"], name: "index_active_storage_blobs_on_key", unique: true
   end
 
+  create_table "preferred_days", force: :cascade do |t|
+    t.string "day"
+    t.datetime "deleted_at"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "preferred_schedules", force: :cascade do |t|
+    t.string "schedule"
+    t.datetime "deleted_at"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "user_preferred_days", force: :cascade do |t|
+    t.bigint "user_id", null: false
+    t.bigint "preferred_day_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["preferred_day_id"], name: "index_user_preferred_days_on_preferred_day_id"
+    t.index ["user_id"], name: "index_user_preferred_days_on_user_id"
+  end
+
+  create_table "user_preferred_schedules", force: :cascade do |t|
+    t.bigint "user_id", null: false
+    t.bigint "preferred_schedule_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["preferred_schedule_id"], name: "index_user_preferred_schedules_on_preferred_schedule_id"
+    t.index ["user_id"], name: "index_user_preferred_schedules_on_user_id"
+  end
+
   create_table "users", force: :cascade do |t|
     t.string "name"
     t.string "last_name"
@@ -44,13 +76,13 @@ ActiveRecord::Schema.define(version: 2019_12_01_060746) do
     t.string "email"
     t.integer "phone_number"
     t.string "address"
-    t.integer "weight"
-    t.integer "height"
+    t.float "weight"
+    t.float "height"
     t.integer "gender"
-    t.integer "imc"
+    t.float "imc"
     t.string "objectives"
     t.string "position"
-    t.integer "role"
+    t.integer "role", default: 2
     t.datetime "deleted_at"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
@@ -63,4 +95,8 @@ ActiveRecord::Schema.define(version: 2019_12_01_060746) do
   end
 
   add_foreign_key "active_storage_attachments", "active_storage_blobs", column: "blob_id"
+  add_foreign_key "user_preferred_days", "preferred_days"
+  add_foreign_key "user_preferred_days", "users"
+  add_foreign_key "user_preferred_schedules", "preferred_schedules"
+  add_foreign_key "user_preferred_schedules", "users"
 end

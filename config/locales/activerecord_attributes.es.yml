@@ -28,7 +28,12 @@ es:
         imc: IMC
         objectives: Objetivos
         role: Tipo de usuario
+        preferred_day_ids: Días de preferencia
+        preferred_schedule_ids: Horario de preferencia
         roles:
           admin: Administrador
           instructor: Instructor
           partner: Usuario
+        genres:
+          male: Masculino
+          female: Femenino

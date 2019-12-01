@@ -4,6 +4,11 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
 
+  has_many :user_preferred_days
+  has_many :preferred_days, through: :user_preferred_days
+  has_many :user_preferred_schedules
+  has_many :preferred_schedules, through: :user_preferred_schedules
+
   has_one_attached :photo
 
   before_validation :create_password, on: :create
@@ -24,6 +29,7 @@ class User < ApplicationRecord
   validates :imc, presence: true, if: -> { partner? }
 
   enum role: %i[admin instructor partner]
+  enum gender: %i[male female]
 
   def full_name
     "#{name} #{last_name}"
