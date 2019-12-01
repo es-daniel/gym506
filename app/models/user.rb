@@ -30,6 +30,7 @@ class User < ApplicationRecord
 
   enum role: %i[admin instructor partner]
   enum gender: %i[male female]
+  enum status: %i[defaulter without_defaulter]
 
   def full_name
     "#{name} #{last_name}"

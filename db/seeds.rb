@@ -16,6 +16,6 @@ User.create([
                 address: 'Carrillos Bajo', position: 'Administrador', role: :admin, password: 'gym506Admin' },
             { name: 'Nillo', last_name: 'Elizondo', email: 'danielelizondo@gmail.com' , phone_number: 88888888,
               weight: 60, height: 1.70,imc: 166, birthday: (DateTime.now - 20.years), identification: 11678975,
-              address: 'Carrillos Bajo', password: 'gym506Partner', objectives: 'Masa Muscular',
+              address: 'Carrillos Bajo', password: 'gym506Partner', objectives: 'Masa Muscular', status: :without_defaulter,
               preferred_schedule_ids: [1,3], gender: :male, role: :partner, preferred_day_ids: [1,2,5] }
             ])

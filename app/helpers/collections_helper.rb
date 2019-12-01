@@ -6,8 +6,8 @@ module CollectionsHelper
   end
 
   def genres_collection
-    User.genres.keys.map do |genre|
-      [t("activerecord.attributes.user.genres.#{genre}"), genre]
+    User.genders.keys.map do |genre|
+      [t("activerecord.attributes.user.genders.#{genre}"), genre]
     end
   end
 

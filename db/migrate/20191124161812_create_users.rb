@@ -15,7 +15,9 @@ class CreateUsers < ActiveRecord::Migration[6.0]
       t.string :objectives
       t.string :position
       t.integer :role, default: 2
+      t.integer :status
       t.datetime :deleted_at
+
       t.timestamps
     end
   end

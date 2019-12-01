@@ -83,6 +83,7 @@ ActiveRecord::Schema.define(version: 2019_12_01_170127) do
     t.string "objectives"
     t.string "position"
     t.integer "role", default: 2
+    t.integer "status"
     t.datetime "deleted_at"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false

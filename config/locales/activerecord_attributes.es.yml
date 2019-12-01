@@ -28,12 +28,16 @@ es:
         imc: IMC
         objectives: Objetivos
         role: Tipo de usuario
+        status: Estado de cuenta
+        statuses:
+          without_defaulter: Sin morosidad
+          defaulter: Mosoro
         preferred_day_ids: Días de preferencia
         preferred_schedule_ids: Horario de preferencia
         roles:
           admin: Administrador
           instructor: Instructor
           partner: Usuario
-        genres:
+        genders:
           male: Masculino
           female: Femenino
