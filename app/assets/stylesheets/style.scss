@@ -205,3 +205,39 @@ legend
   font-size: 55px;
   color: $color-primary;
 }
+
+.dumbbell-1{
+  display: flex;
+  border: 3px solid black;
+  border-radius: 1em;
+  width: 50%;
+  height: 2em;
+  margin: auto;
+  background-color: white;
+  justify-content: center;
+  align-items: center;
+}
+
+.dumbbell-2{
+  display: flex;
+  border: 3px solid black;
+  border-radius: 1em;
+  height: 2em;
+  width: 100%;
+  background-color: white;
+  justify-content: center;
+  align-items: center;
+}
+
+.dumbbell-center{
+  border: 3px solid black;
+  width: 10%;
+  margin: auto;
+  height: 150px;
+  background-color: white;
+}
+
+.dumbbell-1 a{
+  text-transform: uppercase;
+  font-weight: 700;
+}

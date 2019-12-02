@@ -91,6 +91,38 @@
             .card-body
               %h4.text-primary.text-center.card-title= instructor.full_name
               %p.text-center.card-text= instructor.position
+%article#prices-section.bg-light.mb-3
+  %h2.text-center Precios
+  .container-fluid
+    .row
+      %section.col-md-4.mb-3.p-md-5
+        .dumbbell-1
+        .dumbbell-2.text-primary
+          %h4 Adolecentes
+        .dumbbell-center
+        .dumbbell-2.text-primary
+          %h4 ₡15,000 x mes
+        .dumbbell-1
+          %a{:href => "pricing.html"} Seleccionar
+      %section.col-md-4.mb-3.p-md-5
+        .dumbbell-1
+        .dumbbell-2.text-primary
+          %h4 Adultos
+        .dumbbell-center
+        .dumbbell-2.text-primary
+          %h4 ₡24,000 x mes
+        .dumbbell-1
+          %a{:href => "pricing.html"} Seleccionar
+      %section.col-md-4.mb-3.p-md-5
+        .dumbbell-1
+        .dumbbell-2.text-primary
+          %h4 Ciudadano de oro
+        .dumbbell-center
+        .dumbbell-2.text-primary
+          %h4 ₡18,000 x mes
+        .dumbbell-1
+          %a{:href => "pricing.html"} Seleccionar
+
 
 = javascript_pack_tag 'carousel'
 
