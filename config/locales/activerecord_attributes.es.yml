@@ -28,6 +28,9 @@ es:
       benefits:
         one: Beneficio
         other: Beneficios
+      instructors:
+        one: Instructor
+        other: Instructores
     attributes:
       user:
         profile: Perfil

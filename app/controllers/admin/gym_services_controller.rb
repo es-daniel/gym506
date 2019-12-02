@@ -36,6 +36,7 @@ module Admin
     def destroy
       if @service.destroy
         flash[:success] = t('user_exercise.destroyed')
+        redirect_to admin_gym_services_path
       else
         flash[:error] = t('user_exercise.not_destroyed')
       end

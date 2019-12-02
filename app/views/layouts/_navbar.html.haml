@@ -7,11 +7,11 @@
       %li.nav-item
         = link_to t('nav.home'), root_path, class: "nav-link #{ 'active' if controller_name == 'home' }"
       %li.nav-item
-        = link_to t('nav.about_us'), '#  ', class: 'nav-link'
+        = link_to t('nav.about_us'), root_path(anchor: 'about-us-section'), class: 'nav-link'
       %li.nav-item
-        = link_to t('nav.services'), '#  ', class: 'nav-link '
+        = link_to t('nav.services'), root_path(anchor: 'services-section'), class: 'nav-link '
       %li.nav-item
-        = link_to t('nav.benefits'), '#  ', class: 'nav-link '
+        = link_to t('nav.benefits'), root_path(anchor: 'benefits-section'), class: 'nav-link '
       %li.nav-item
         = link_to t('nav.instructors'), '#  ', class: 'nav-link '
       %li.nav-item

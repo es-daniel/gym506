@@ -80,8 +80,17 @@
         = image_tag 'icons/basketball.png', class: 'img-fluid'
         %figcaption.mt-2
           %h4 Basketball
-%article#instructors-section
-  %h2= 
+%article#instructors-section.bg-light.pb-3.pt-3
+  %h2.text-center.mb-3.mt-3= t('activerecord.models.instructors.other')
+  .container-fluid
+    .row.justify-content-center
+      - @instructors.each do |instructor|
+        .col-md-4.mb-sm-3.p-md-5
+          .card.mb-2
+            = image_tag instructor.photo, class: 'card-img-top',width: 300, height: 400
+            .card-body
+              %h4.text-primary.text-center.card-title= instructor.full_name
+              %p.text-center.card-text= instructor.position
 
 = javascript_pack_tag 'carousel'
 
