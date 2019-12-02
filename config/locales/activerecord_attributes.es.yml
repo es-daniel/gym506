@@ -25,6 +25,9 @@ es:
       activity:
         one: Actividad
         other: Actividades
+      benefits:
+        one: Beneficio
+        other: Beneficios
     attributes:
       user:
         profile: Perfil

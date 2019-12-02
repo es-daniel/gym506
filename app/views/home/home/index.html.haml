@@ -9,31 +9,32 @@
         %h2.text-primary.d-block.d-sm-block.d-md-none= t('app.name')
 
         %h2.mb-0= t('app.slogan')
-%article#about-us-section.mt-3
-  .container-fluid.row
-    .col-md-4.mb-3
-      %fieldset.info
-        %legend.text-center
-          %h2 Nosotros
-        %p.text-justify
-          El Gimnasion 506 Fitness es un negocio dedicado al mejoramiento físico integral de sus clientes.
-          Este gimnasio cuenta con instructores los cuales arman la rutina de acuerdo con las necesidades del socio,
-          brindando servicios de nutrición, maquinas, pilates, crossfit, piscina, jacuzzi, entre otros.
-        %section
-          %h3.text-primary.text-center Misión
-          %p.text-justify
-            Contribuir en crear y mantener una excelente salud física y mental
-            mediante programas de nutrición y entrenamiento.
-        %section
-          %h3.text-primary.text-center Visión
-          %p.text-justify
-            Ser el gimnasio líder en el país en brindar tanto calidad como
-            bienestar a todos nuestros socios.
-    .col-md-8.d-flex.flex-column.justify-content-center
-      = image_tag 'about-us/machines.jpg', height: 350, width: '100%', alt: 'Imagen de maquinas en el gimnasio'
-%article#services-section.bg-light
+%article#about-us-section.mt-3.mb-3
   .container-fluid
-    %h2.text-center= t('activerecord.models.gym_service.other')
+    .row
+      .col-md-4.mb-3
+        %fieldset.info
+          %legend.text-center
+            %h2 Nosotros
+          %p.text-justify
+            El Gimnasion 506 Fitness es un negocio dedicado al mejoramiento físico integral de sus clientes.
+            Este gimnasio cuenta con instructores los cuales arman la rutina de acuerdo con las necesidades del socio,
+            brindando servicios de nutrición, maquinas, pilates, crossfit, piscina, jacuzzi, entre otros.
+          %section
+            %h3.text-primary.text-center Misión
+            %p.text-justify
+              Contribuir en crear y mantener una excelente salud física y mental
+              mediante programas de nutrición y entrenamiento.
+          %section
+            %h3.text-primary.text-center Visión
+            %p.text-justify
+              Ser el gimnasio líder en el país en brindar tanto calidad como
+              bienestar a todos nuestros socios.
+      .col-md-8.d-flex.flex-column.justify-content-center
+        = image_tag 'about-us/machines.jpg', class: 'img-fluid', alt: 'Imagen de maquinas en el gimnasio'
+%article#services-section.bg-light
+  %h2.text-center= t('activerecord.models.gym_service.other')
+  .container-fluid
     #services-carousel
       #carouselExampleInterval.carousel.slide{"data-ride" => "carousel"}
         .carousel-inner
@@ -41,7 +42,7 @@
             .carousel-item{"data-interval" => "10000", class: "#{'active' if service == @services.first }"}
               .row
                 .offset-md-1.col-md-6.mb-3
-                  = image_tag service.photo, class: 'ml-md-5' if service.photo.attached?
+                  = image_tag service.photo, class: 'ml-md-5 img-fluid' if service.photo.attached?
                 .col-md-3.d-flex.flex-column.justify-content-center
                   %h3.text-primary.text-center= service.name
                   %p.text-center= service.description
@@ -51,6 +52,36 @@
         %a.carousel-control-next{"data-slide" => "next", :href => "#carouselExampleInterval", :role => "button"}
           %span.carousel-control-next-icon{"aria-hidden" => "true"}
           %span.sr-only Next
+%article#benefits-section.mt-5.mb-5
+  %h2.text-center= t('activerecord.models.benefits.other')
+  .container-fluid
+    .row
+      %figure.col-md-2.text-center
+        = image_tag 'icons/car.png', class: 'img-fluid'
+        %figcaption.mt-2
+          %h4 Parqueo
+      %figure.col-md-2.text-center
+        = image_tag 'icons/eat.png', class: 'img-fluid'
+        %figcaption.mt-2
+          %h4 Soda
+      %figure.col-md-2.text-center
+        = image_tag 'icons/medical.png', class: 'img-fluid'
+        %figcaption.mt-2
+          %h4 Nutricionista
+      %figure.col-md-2.text-center
+        = image_tag 'icons/shopping-bag.png', class: 'img-fluid'
+        %figcaption.mt-2
+          %h4 Tienda
+      %figure.col-md-2.text-center
+        = image_tag 'icons/child.png', class: 'img-fluid'
+        %figcaption.mt-2
+          %h4 Área de niños
+      %figure.col-md-2.text-center
+        = image_tag 'icons/basketball.png', class: 'img-fluid'
+        %figcaption.mt-2
+          %h4 Basketball
+%article#instructors-section
+  %h2= 
 
 = javascript_pack_tag 'carousel'
 
