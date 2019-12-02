@@ -161,3 +161,47 @@ footer p{
   opacity: 0.5;
   z-index: 1;
 }
+
+fieldset
+{
+  border: 1px solid $color-primary !important;
+  margin: 0;
+  padding: 10px;
+  position: relative;
+  border-radius:4px;
+  background-color: white;
+}
+
+legend
+{
+  font-size:14px;
+  font-weight:bold;
+  width: 50%;
+  border: 1px solid $color-primary;
+  border-radius: 4px;
+  padding: 5px 5px 5px 10px;
+  background-color: white;
+  margin: 0 auto;
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  height: 100px;
+  width: 100px;
+  background-size: 100%, 100%;
+  border-radius: 50%;
+  background-image: none;
+}
+
+.carousel-control-next-icon:after
+{
+  font-family: "Font Awesome 5 Free"; font-weight: 900; content: "\f054";
+  font-size: 55px;
+  color:  $color-primary;
+}
+
+.carousel-control-prev-icon:after {
+  font-family: "Font Awesome 5 Free"; font-weight: 900; content: "\f053";
+  font-size: 55px;
+  color: $color-primary;
+}

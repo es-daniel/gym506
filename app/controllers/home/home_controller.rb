@@ -1,4 +1,9 @@
 class Home::HomeController < ApplicationController
-  def index
+  before_action :set_services
+  def index; end
+
+  private
+  def set_services
+    @services = GymService.all
   end
 end
