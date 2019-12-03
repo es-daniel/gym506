@@ -15,4 +15,7 @@
       = render partial: 'layouts/navbar'
     %main#page-content{ class: "#{'container-fluid' unless controller_path ==  'home/home' }" }
       = yield
+    %a#back-to-top.btn.btn-primary.btn-lg.back-to-top{:href => "#", :role => "button"}
+      %i.fas.fa-chevron-up
+
     = render partial: 'layouts/footer'

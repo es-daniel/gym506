@@ -256,3 +256,12 @@ legend
   text-transform: uppercase;
   font-weight: 700;
 }
+
+
+.back-to-top {
+  position: fixed;
+  bottom: 10px;
+  right: 10px;
+  display: none;
+  z-index: 999999;
+}

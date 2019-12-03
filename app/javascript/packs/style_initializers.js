@@ -2,6 +2,7 @@ $(document).on('turbolinks:load', function () {
     initFileNameEvent();
     initSelectPicker();
     $('[data-toggle="tooltip"]').tooltip();
+    initGoTopButton();
 });
 
 function initFileNameEvent() {
@@ -15,4 +16,27 @@ function initFileNameEvent() {
 function initSelectPicker() {
     $('.selectpicker').selectpicker();
     $('.selectpicker').addClass('bootstrap-selectpicker')
+}
+
+function initGoTopButton() {
+    $(window).scroll(function () {
+        if ($(this).scrollTop() > 50) {
+            $('#back-to-top').fadeIn();
+        } else {
+            $('#back-to-top').fadeOut();
+        }
+        clearTimeout($.data(this, 'scrollTimer'));
+        $.data(this, 'scrollTimer', setTimeout(function() {
+            $('#back-to-top').fadeOut();
+        }, 1000));
+    });
+    // scroll body to 0px on click
+    $('#back-to-top').click(function () {
+        $('body,html').animate({
+            scrollTop: 0
+        }, 400);
+        return false;
+    });
+
+
 }

@@ -1,4 +1,4 @@
-%nav.navbar.navbar-expand-lg.navbar-light.bg-light.fixed-top
+%nav.navbar.navbar-expand-lg.navbar-light{class: "#{ 'bg-light' if controller_name != 'home' }"}
   = link_to 'GYM 506', root_path, class: 'navbar-brand text-primary'
   %button.navbar-toggler{"aria-controls" => "navbarSupportedContent", "aria-expanded" => "false", "aria-label" => "Toggle navigation", "data-target" => "#navbarSupportedContent", "data-toggle" => "collapse", :type => "button"}
     %span.navbar-toggler-icon
@@ -13,11 +13,11 @@
       %li.nav-item
         = link_to t('nav.benefits'), root_path(anchor: 'benefits-section'), class: 'nav-link '
       %li.nav-item
-        = link_to t('nav.instructors'), '#  ', class: 'nav-link '
+        = link_to t('nav.instructors'), root_path(anchor: 'instructors-section'), class: 'nav-link '
       %li.nav-item
-        = link_to t('nav.prices'), '#  ', class: 'nav-link'
+        = link_to t('nav.prices'),root_path(anchor: 'prices-section'), class: 'nav-link'
       %li.nav-item
-        = link_to t('nav.contact'), '#  ', class: 'nav-link'
+        = link_to t('nav.contact'),root_path(anchor: 'contact-section'), class: 'nav-link'
       %li.nav-item
         = link_to t('nav.activities'), activities_path, class: 'nav-link'
       - if current_user&.admin?
