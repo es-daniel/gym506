@@ -3,6 +3,7 @@
   "private": true,
   "dependencies": {
     "@client-side-validations/client-side-validations": "^0.1.0",
+    "@fortawesome/fontawesome-free": "^5.11.2",
     "@fullcalendar/core": "^4.3.1",
     "@fullcalendar/daygrid": "^4.3.0",
     "@fullcalendar/interaction": "^4.3.0",
@@ -20,7 +21,6 @@
   },
   "version": "0.1.0",
   "devDependencies": {
-    "@fortawesome/fontawesome-free": "^5.11.2",
     "webpack-dev-server": "^3.9.0"
   }
 }
