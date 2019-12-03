@@ -38,6 +38,7 @@ module Admin
       else
         flash[:error] = t('profile.not_destroyed')
       end
+      redirect_to admin_profiles_path
     end
 
     private
