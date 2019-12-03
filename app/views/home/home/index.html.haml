@@ -87,7 +87,7 @@
       - @instructors.each do |instructor|
         .col-md-4.mb-sm-3.p-md-5
           .card.mb-2
-            = image_tag instructor.photo, class: 'card-img-top',width: 300, height: 400
+            = image_tag instructor.photo, class: 'card-img-top',width: 300, height: 400 if instructor.photo.attached?
             .card-body
               %h4.text-primary.text-center.card-title= instructor.full_name
               %p.text-center.card-text= instructor.position
