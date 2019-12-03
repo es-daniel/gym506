@@ -55,4 +55,7 @@ es:
     destroyed:  Actividad eliminado exitosamente
     not_destroyed:  Actividad no eliminado
     select_an_instructor: Seleccione un instructor
-
+  session:
+    new: Iniciar Sesión
+    remenber_me: Recordarme
+    log_in: Ingresar

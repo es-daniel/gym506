@@ -20,6 +20,7 @@ class User < ApplicationRecord
   validates :phone_number, presence: true
   validates :address, presence: true
   validates :role, presence: true
+  validates :password, presence: true
   validates :position, presence: true, if: -> { admin? || instructor? }
   validates :identification, presence: true, if: -> { partner? }
   validates :birthday, presence: true, if: -> { partner? }

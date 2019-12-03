@@ -50,6 +50,8 @@ es:
         objectives: Objetivos
         role: Tipo de usuario
         status: Estado de cuenta
+        password: Contraseña
+        remember_me: Recordarme
         statuses:
           without_defaulter: Sin morosidad
           defaulter: Mosoro
