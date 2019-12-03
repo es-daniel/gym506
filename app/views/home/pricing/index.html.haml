@@ -1,0 +1,37 @@
+%section#price-category
+  %h2.text-center Categoría
+  .row.offset-md-4.col-md-4
+    %select.form-control
+      %option{:value => "adult"} Adulto
+      %option{:value => "young"} Adolecente
+      %option{:value => "gold-citizen"} Ciudadano de oro
+%article#prices-section.mb-3.mt-3
+  %h2.text-center Precios
+  .row
+    %section.col-md-4.mb-3.p-md-5
+      .dumbbell-1
+      .dumbbell-2.text-primary
+        %h4 Diario
+      .dumbbell-center
+      .dumbbell-2.text-primary
+        %h4 ₡1,500 x día
+      .dumbbell-1
+        = link_to 'Pagar', '#'
+    %section.col-md-4.mb-3.p-md-5
+      .dumbbell-1
+      .dumbbell-2.text-primary
+        %h4 Mensual
+      .dumbbell-center
+      .dumbbell-2.text-primary
+        %h4 ₡24,000 x mes
+      .dumbbell-1
+        = link_to 'Pagar', '#'
+    %section.col-md-4.mb-3.p-md-5
+      .dumbbell-1
+      .dumbbell-2.text-primary
+        %h4 Anual
+      .dumbbell-center
+      .dumbbell-2.text-primary
+        %h4 ₡20,000 x año
+      .dumbbell-1
+        = link_to 'Pagar', '#'

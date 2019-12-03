@@ -123,7 +123,7 @@
         .dumbbell-2.text-primary
           %h4 ₡15,000 x mes
         .dumbbell-1
-          %a{:href => "pricing.html"} Seleccionar
+          = link_to 'Seleccionar', pricing_index_path
       %section.col-md-4.mb-3.p-md-5
         .dumbbell-1
         .dumbbell-2.text-primary
@@ -132,7 +132,7 @@
         .dumbbell-2.text-primary
           %h4 ₡24,000 x mes
         .dumbbell-1
-          %a{:href => "pricing.html"} Seleccionar
+          = link_to 'Seleccionar', pricing_index_path
       %section.col-md-4.mb-3.p-md-5
         .dumbbell-1
         .dumbbell-2.text-primary
@@ -141,8 +141,7 @@
         .dumbbell-2.text-primary
           %h4 ₡18,000 x mes
         .dumbbell-1
-          %a{:href => "pricing.html"} Seleccionar
-
+          = link_to 'Seleccionar', pricing_index_path
 
 = javascript_pack_tag 'carousel'
 

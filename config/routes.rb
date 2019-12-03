@@ -9,6 +9,7 @@ Rails.application.routes.draw do
   end
   scope module: :home do
     resources :activities, only: :index
+    resources :pricing, only: :index
   end
 
   devise_for :users
